@@ -6,7 +6,15 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+window.axios = require('axios');
+
+window.axios.get('http://127.0.0.1:8000/api/posts').then(results => {
+    console.log(results);
+}).catch(e => {
+    console.log(e);
+})
+
+//window.Vue = require('vue');
 
 /**
  * The following block of code may be used to automatically register your
@@ -27,6 +35,6 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app',
-});
+// const app = new Vue({
+//     el: '#app',
+// });

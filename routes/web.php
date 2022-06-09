@@ -32,7 +32,7 @@ Route::middleware('auth')
         Route::get('/', 'HomeController@index')->name('index');
         Route::resource('/posts', 'PostController');
     });
-//il middleware e' il sfotware intermedio che quando chiamiamo una determinata rotta
+//il middleware e' il software intermedio che quando chiamiamo una determinata rotta
 //ci passa attraverso e controlla l'autenticazione
 //in questo caso tutti i controller che hanno Admin nel namespace
 //prende tutte le rotte con il prefisso admin(gli uri della rotta) e il nome della rotta (route:list come riferimento)
